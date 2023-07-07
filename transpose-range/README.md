@@ -9,11 +9,24 @@ This lets you transpose the “real notes” of an instrument without affecting 
 ## Setup Instructions
 
 1. In the code block below this list, click on the copy button that appears in the upper right
-   corner.
+   corner to copy the script code to your clipboard.
 
-2. Open Kontakt (or Kontakt Player) and click the **KSP** button toward the top.
+2. Open Kontakt (or Kontakt Player) and click the **KSP** button toward the top to open the
+   Multi Script editor.
 
-3. TODO: Finish these instructions.
+3. Click the **Edit** button in the lower left corner of the editor, which will open a big text
+   area. Then paste the script code you copied in step 1 into that text area with **Ctrl V** or
+   **⌘ V**.
+
+4. Click the **Apply** button. Then click **Edit** again to collapse the code view.
+
+5. Now click the **Preset** menu and select **Save preset...**, which should open up a file save
+   dialog that is opened to a `Multiscripts` subfolder of your Kontakt user presets. Double click
+   on the `Transform` subfolder (since that's the type of script this is), then save this script
+   as `Transpose Range.nkp`.
+
+6. Note that if you have multiple versions of Kontakt (*e.g.* Kontakt 6 and Kontakt 7), you will
+   have to repeat these steps for each version, since these presets are not shared automatically.
 
 ```text
 {***********************************************************
@@ -94,4 +107,7 @@ end on
 
 ## Usage Instructions
 
-TODO.
+After saving the above script code as a preset, you can load it in any Kontakt multi by opening the
+**KSP** Multi Script editor and selecting **Preset > User > Transform > Transpose Range**.
+
+TODO: Rest of instructions.
