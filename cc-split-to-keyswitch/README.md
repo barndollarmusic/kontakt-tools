@@ -390,18 +390,18 @@ on ui_control ($fourth_enabled)
 end on
 
 on midi_in
-	{Only process CC messages...}
+	{* Only process CC messages... *}
 	if ($MIDI_COMMAND # $MIDI_COMMAND_CC)
 		exit
 	end if
 
-	{...on the configured channel(s)...}
+	{* ...on the configured channel(s)... *}
 	$affected_chan_idx := get_control_par(get_ui_id($channels_menu), $CONTROL_PAR_SELECTED_ITEM_IDX) - 1
 	if (($affected_chan_idx # -1) and ($MIDI_CHANNEL # $affected_chan_idx))
 		exit
 	end if
 
-	{...if they match one of the configured inputs...}
+	{* ...if they match one of the configured inputs. *}
 	$out_note := -1
 	$out_velocity := 0
 
