@@ -5,12 +5,12 @@ even with locked Kontakt libraries.
 
 ## Transpose Range
 
-Keyswitch-friendly transposition, applied to all channels in a Multi or to just a specific channel
+Keyswitch-friendly transposition, applied to all channels in a Multi or to just a specific channel.
 This lets you transpose the “real notes” of an instrument without affecting the keyswitches.
 
 🔗 **GET IT HERE**: [Transpose Range](transpose-range/README.md)
 
-<!-- TODO: Add screenshot. -->
+![Screenshot of Transpose Range](images/transpose_range.png)
 
 ## CC Split to Keyswitch
 
@@ -20,7 +20,7 @@ for example.
 
 🔗 **GET IT HERE**: [CC Split to Keyswitch](cc-split-to-keyswitch/README.md)
 
-<!-- TODO: Add screenshot. -->
+![Screenshot of CC Split to Keyswitch](images/cc_split_to_keyswitch.png)
 
 ## License
 

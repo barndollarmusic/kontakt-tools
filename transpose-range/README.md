@@ -1,9 +1,10 @@
 # Transpose Range
 
-Keyswitch-friendly transposition, applied to all channels in a Multi or to just a specific channel
+Keyswitch-friendly transposition, applied to all channels in a Multi or to just a specific channel.
 This lets you transpose the “real notes” of an instrument without affecting the keyswitches.
 
-<!-- TODO: Add screenshot. -->
+![Screenshot of Transpose Range](../images/transpose_range.png)
+
 <!-- TODO: Add link to YouTube video showing it. -->
 
 ## Setup Instructions
@@ -18,12 +19,17 @@ This lets you transpose the “real notes” of an instrument without affecting 
    area. Then paste the script code you copied in step 1 into that text area with **Ctrl V** or
    **⌘ V**.
 
+   ![Screenshot of KSP Multi Script editor](../images/k7_ksp_editor.png)
+
 4. Click the **Apply** button. Then click **Edit** again to collapse the code view.
 
 5. Now click the **Preset** menu and select **Save preset...**, which should open up a file save
    dialog that is opened to a `Multiscripts` subfolder of your Kontakt user presets. Double click
    on the `Transform` subfolder (since that's the type of script this is), then save this script
    as `Transpose Range.nkp`.
+
+   ![Screenshot of Save preset](../images/k7_ksp_save_preset.png)
+   ![Screenshot of save dialog](../images/k7_ksp_save_dialog1.png)
 
 6. Note that if you have multiple versions of Kontakt (*e.g.* Kontakt 6 and Kontakt 7), you will
    have to repeat these steps for each version, since these presets are not shared automatically.
