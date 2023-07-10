@@ -19,7 +19,7 @@ This lets you transpose the “real notes” of an instrument without affecting 
    area. Then paste the script code you copied in step 1 into that text area with **Ctrl V** or
    **⌘ V**.
 
-   ![Screenshot of KSP Multi Script editor](../images/k7_ksp_editor.png)
+   ![Screenshot of KSP Multi Script editor](../images/k7_ksp_editor_annotated.png)
 
 4. Click the **Apply** button. Then click **Edit** again to collapse the code view.
 
