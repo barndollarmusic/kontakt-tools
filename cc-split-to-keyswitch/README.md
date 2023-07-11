@@ -29,7 +29,7 @@ for example.
    on the `Transform` subfolder (since that's the type of script this is), then save this script
    as `CC Split to Keyswitch.nkp`.
 
-   ![Screenshot of Save preset](../images/k7_ksp_save_preset.png)
+   ![Screenshot of Save preset](../images/k7_preset_menu_cc_split.png)
    ![Screenshot of save dialog](../images/k7_save_cc_split_preset.png)
 
 6. Note that if you have multiple versions of Kontakt (*e.g.* Kontakt 6 and Kontakt 7), you will

@@ -28,7 +28,7 @@ This lets you transpose the “real notes” of an instrument without affecting 
    on the `Transform` subfolder (since that's the type of script this is), then save this script
    as `Transpose Range.nkp`.
 
-   ![Screenshot of Save preset](../images/k7_ksp_save_preset.png)
+   ![Screenshot of Save preset](../images/k7_preset_menu_transpose_range.png)
    ![Screenshot of save dialog](../images/k7_save_transpose_range.png)
 
 6. Note that if you have multiple versions of Kontakt (*e.g.* Kontakt 6 and Kontakt 7), you will
