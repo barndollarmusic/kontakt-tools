@@ -10,12 +10,62 @@ for example.
 
 ## Setup Instructions
 
-1. In the code block below this list, click on the copy button that appears in the upper right
-   corner.
+1. Go to [The Code](#the-code) toward the bottom of this page, and click on the copy button that
+   appears in the upper right corner to copy the script code to your clipboard.
 
-2. Open Kontakt (or Kontakt Player) and click the **KSP** button toward the top.
+2. Open Kontakt (or Kontakt Player) and click the **KSP** button toward the top to open the
+   Multi Script editor.
 
-3. TODO: Finish these instructions.
+3. Click the **Edit** button in the lower left corner of the editor, which will open a big text
+   area. Then paste the script code you copied in step 1 into that text area with **Ctrl V** or
+   **⌘ V**.
+
+   ![Screenshot of KSP Multi Script editor](../images/k7_ksp_editor_annotated.png)
+
+4. Click the **Apply** button. Then click **Edit** again to collapse the code view.
+
+5. Now click the **Preset** menu and select **Save preset...**, which should open up a file save
+   dialog that is opened to a `Multiscripts` subfolder of your Kontakt user presets. Double click
+   on the `Transform` subfolder (since that's the type of script this is), then save this script
+   as `CC Split to Keyswitch.nkp`.
+
+   ![Screenshot of Save preset](../images/k7_ksp_save_preset.png)
+   ![Screenshot of save dialog](../images/k7_save_cc_split_preset.png)
+
+6. Note that if you have multiple versions of Kontakt (*e.g.* Kontakt 6 and Kontakt 7), you will
+   have to repeat these steps for each version, since these presets are not shared automatically.
+
+## Usage Instructions
+
+After saving the above script code as a preset, you can load it in any Kontakt Multi by opening the
+**KSP** Multi Script editor and selecting **Preset > User > Transform > CC Split to Keyswitch**.
+
+1. If you want this CC-to-keyswitch transformation to apply to all Kontakt Instruments in this
+   Multi, leave **Chan** set to its default of `All`. If you want it to apply only to a specific
+   MIDI channel, choose it. If you need it applied to some but not all MIDI channels, then you can
+   use multiple instances of this CC Split to Keyswitch script.
+
+2. You can configure up to 4 **CC#** and **Min** to **Max** value ranges to re-map. Click more of
+   the leftmost checkboxes to enable more rows.
+
+3. For each enabled value range, configure the **CC#** (*e.g.* CC1 is the Mod Whel, CC11 is
+   Expression, *etc.*) that should be remapped and the **Min** and **Max** values (the full `0` to
+   `127` range, or a sub-range of it) that apply to a particular keyswitch.
+
+4. Again for each enabled row, choose the **Note** and **Velocity** of the keyswitch that will be
+   output when the previous input conditions are met.
+
+   Reminder that pitch notation within Kontakt uses the C3 is middle C (MIDI note 60) convention.
+
+Note that this script does NOT support a continuously varying keyswitch note velocity based on the
+exact input controller value. For example, if you configure an input of `CC20` from *Min* value of
+`65` and *Max* value of `100` to emit a keyswitch note “D-2” at velocity `33`, any matching MIDI
+`CC20` message with value `>= 65` and `<= 100` will always emit a keyswitch note “D-2” with the
+exact velocity of `33`.
+
+## The Code
+
+After copying, go [back to the Setup Instructions](#setup-instructions).
 
 ```text
 {***********************************************************
@@ -23,7 +73,7 @@ CC Split to Keyswitch
 https://github.com/barndollarmusic/kontakt-tools
 
 Author: Eric Barndollar
-Modified: 2023-07-07
+Modified: 2023-07-11
 License: MIT
 ************************************************************}
 
@@ -438,6 +488,12 @@ on midi_in
 end on
 ```
 
-## Usage Instructions
+## Version History
 
-TODO.
+Any bug fixes or feature additions will be listed here. See if your saved preset is the latest
+version by clicking the **Edit** buton and looking at the `Modified:` date (*YYYY-MM-DD*) within
+your script code.
+
+| Date       | Changes |
+| ---------- | ------------- |
+| 2023-07-11 | Initial version. |
