@@ -73,7 +73,7 @@ CC Split to Keyswitch
 https://github.com/barndollarmusic/kontakt-tools
 
 Author: Eric Barndollar
-Modified: 2023-07-11
+Modified: 2023-07-12
 License: MIT
 ************************************************************}
 
@@ -173,7 +173,7 @@ on init
 	make_persistent($first_note)
 	read_persistent_var($first_note)
 
-	declare ui_value_edit $first_velocity (0, 127, 1)
+	declare ui_value_edit $first_velocity (1, 127, 1)
 	set_control_par(get_ui_id($first_velocity), $CONTROL_PAR_VALUE, 127)
 	set_control_par(get_ui_id($first_velocity), $CONTROL_PAR_GRID_X, 6)
 	set_control_par(get_ui_id($first_velocity), $CONTROL_PAR_GRID_Y, 2)
@@ -224,7 +224,7 @@ on init
 	make_persistent($second_note)
 	read_persistent_var($second_note)
 
-	declare ui_value_edit $second_velocity (0, 127, 1)
+	declare ui_value_edit $second_velocity (1, 127, 1)
 	set_control_par(get_ui_id($second_velocity), $CONTROL_PAR_VALUE, 127)
 	set_control_par(get_ui_id($second_velocity), $CONTROL_PAR_GRID_X, 6)
 	set_control_par(get_ui_id($second_velocity), $CONTROL_PAR_GRID_Y, 3)
@@ -275,7 +275,7 @@ on init
 	make_persistent($third_note)
 	read_persistent_var($third_note)
 
-	declare ui_value_edit $third_velocity (0, 127, 1)
+	declare ui_value_edit $third_velocity (1, 127, 1)
 	set_control_par(get_ui_id($third_velocity), $CONTROL_PAR_VALUE, 127)
 	set_control_par(get_ui_id($third_velocity), $CONTROL_PAR_GRID_X, 6)
 	set_control_par(get_ui_id($third_velocity), $CONTROL_PAR_GRID_Y, 4)
@@ -326,7 +326,7 @@ on init
 	make_persistent($fourth_note)
 	read_persistent_var($fourth_note)
 
-	declare ui_value_edit $fourth_velocity (0, 127, 1)
+	declare ui_value_edit $fourth_velocity (1, 127, 1)
 	set_control_par(get_ui_id($fourth_velocity), $CONTROL_PAR_VALUE, 127)
 	set_control_par(get_ui_id($fourth_velocity), $CONTROL_PAR_GRID_X, 6)
 	set_control_par(get_ui_id($fourth_velocity), $CONTROL_PAR_GRID_Y, 5)
@@ -496,4 +496,5 @@ your script code.
 
 | Date       | Changes |
 | ---------- | ------------- |
+| 2023-07-12 | Restrict Note velocity to \[1, 127\] range. |
 | 2023-07-11 | Initial version. |
