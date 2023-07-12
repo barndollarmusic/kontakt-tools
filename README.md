@@ -20,7 +20,7 @@ for example.
 
 🔗 **GET IT HERE**: [CC Split to Keyswitch](cc-split-to-keyswitch/README.md)
 
-![Screenshot of CC Split to Keyswitch](images/cc_split_to_keyswitch.png)
+![Screenshot of CC Split to Keyswitch](images/cc_split.png)
 
 ## License
 

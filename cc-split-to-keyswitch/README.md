@@ -4,7 +4,7 @@ Turn input MIDI CC messages from your controller hardware and DAW into keyswitch
 with split behavior depending on the value. This lets you control velocity-sensitive keyswitches,
 for example.
 
-![Screenshot of CC Split to Keyswitch](../images/cc_split_to_keyswitch.png)
+![Screenshot of CC Split to Keyswitch](../images/cc_split.png)
 
 <!-- TODO: Add link to YouTube video showing it. -->
 
