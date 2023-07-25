@@ -6,7 +6,9 @@ for example.
 
 ![Screenshot of CC Split to Keyswitch](../images/cc_split.png)
 
-<!-- TODO: Add link to YouTube video showing it. -->
+Video demo &amp; setup walkthrough:
+
+[![Link to YouTube video walkthrough](../images/yt_video_preview.png)](https://youtu.be/V8jjvALg1Q4)
 
 ## Setup Instructions
 

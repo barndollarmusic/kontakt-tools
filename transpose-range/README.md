@@ -5,7 +5,9 @@ This lets you transpose the “real notes” of an instrument without affecting 
 
 ![Screenshot of Transpose Range](../images/transpose_range.png)
 
-<!-- TODO: Add link to YouTube video showing it. -->
+Video demo &amp; setup walkthrough:
+
+[![Link to YouTube video walkthrough](../images/yt_video_preview.png)](https://youtu.be/V8jjvALg1Q4)
 
 ## Setup Instructions
 
