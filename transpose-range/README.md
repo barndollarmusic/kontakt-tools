@@ -66,7 +66,7 @@ Transpose Range
 https://github.com/barndollarmusic/kontakt-tools
 
 Author: Eric Barndollar
-Modified: 2023-07-11
+Modified: 2024-06-18
 License: MIT
 
 Based on Factory Remap Keyboard and MIDI Transpose Scripts.
@@ -111,12 +111,47 @@ on init
  make_persistent($transpose_semitones)
  read_persistent_var($transpose_semitones)
 
+ declare ui_label $channels_label (1, 1)
+ set_text($channels_label, "Channel(s)")
+ set_control_par(get_ui_id($channels_label), $CONTROL_PAR_GRID_X, 6)
+ set_control_par(get_ui_id($channels_label), $CONTROL_PAR_GRID_Y, 1)
+
+ declare ui_menu $channels_menu
+ add_menu_item($channels_menu, "All", 0)
+ add_menu_item($channels_menu, "1", 1)
+ add_menu_item($channels_menu, "2", 2)
+ add_menu_item($channels_menu, "3", 3)
+ add_menu_item($channels_menu, "4", 4)
+ add_menu_item($channels_menu, "5", 5)
+ add_menu_item($channels_menu, "6", 6)
+ add_menu_item($channels_menu, "7", 7)
+ add_menu_item($channels_menu, "8", 8)
+ add_menu_item($channels_menu, "9", 9)
+ add_menu_item($channels_menu, "10", 10)
+ add_menu_item($channels_menu, "11", 11)
+ add_menu_item($channels_menu, "12", 12)
+ add_menu_item($channels_menu, "13", 13)
+ add_menu_item($channels_menu, "14", 14)
+ add_menu_item($channels_menu, "15", 15)
+ add_menu_item($channels_menu, "16", 16)
+ set_control_par(get_ui_id($channels_menu), $CONTROL_PAR_GRID_X, 6)
+ set_control_par(get_ui_id($channels_menu), $CONTROL_PAR_GRID_Y, 2)
+ make_persistent($channels_menu)
+ read_persistent_var($channels_menu)
+
  declare $new_key
+ declare $affected_chan_idx
 end on
 
 on midi_in
  {* Only process notes... *}
  if ($MIDI_COMMAND # $MIDI_COMMAND_NOTE_ON and $MIDI_COMMAND # $MIDI_COMMAND_NOTE_OFF and $MIDI_COMMAND # $MIDI_COMMAND_POLY_AT)
+  exit
+ end if
+
+ {* ...on the configured channel(s)... *}
+ $affected_chan_idx := get_control_par(get_ui_id($channels_menu), $CONTROL_PAR_SELECTED_ITEM_IDX) - 1
+ if (($affected_chan_idx # -1) and ($MIDI_CHANNEL # $affected_chan_idx))
   exit
  end if
 
@@ -145,4 +180,5 @@ your script code.
 
 | Date       | Changes |
 | ---------- | ------------- |
-| 2023-07-11 | Initial version. |
+| 2024-06-18 | Added missing Channel(s) menu (sorry! just realized I had uploaded an older version). |
+| 2023-07-11 | Initial version. (This was missing Channels control). |
